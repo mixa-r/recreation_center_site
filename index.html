@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Портофолио</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<!-- onload запуск функции времени при запуске сайта -->
+
+<body onload="clock()">
+
+    <header class="header">
+
+        <div class="container">
+            <div class="header_inner">
+                <div class="user">
+                    <img class="user_avatar" src="images/logo.png" alt="">
+                    <div class="user_content">
+                        <div class="user_name">Canyon <br> Matka</div>
+                        <div class="user_prof">Hotel and restaurant</div>
+                    </div>
+                </div>
+
+                <div class="nav" id="nav">
+                    <div>
+                        <!-- Вывод текущего времени и даты, плюс 
+                             вывод последжнего изменения страницы временя и дата -->
+                        <span id="doc_time">
+                                Дата и время
+                            </span>
+
+                    </div>
+                    <a class="nav_link" href="#" onclick="Welcome();return false;">Давай знакомится</a>
+                    <!-- Событие onclick для вызова функции Welcome из внешнего файла с javaScript-->
+
+                    <a class="nav_link" href="#" data-scroll="#work">Услуги</a>
+                    <a class="nav_link" href="#" data-scroll="#about">О нас</a>
+                    <a class="nav_link" href="#" data-scroll="#otziv">Отзывы</a>
+                    <a class="nav_link" href="mailto:mixa-r@mail.ru">Обратная связь</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Блок приветствия -->
+    <div class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <div class="intro_content">
+                    <h2 class="inrto_subtitle">Добро пожаловать</h2>
+                    <h1 onmouseover="colorch('#82a362')" onmouseout="colorch('Black')" class="intro_title">Canyon Matka</h1>
+                    <SCRIPT>
+                        function colorch(color) {
+                            event.srcElement.style.color = color
+                        }
+                    </SCRIPT>
+                    <div class="intro_text">Почувствуйте природу Македонии</div>
+
+                    <!-- блок ссылок -->
+                    <div class="social">
+                        <a class="social_link" href="#">
+                            <img src="images/youtube.png" alt="">
+                        </a>
+                        <a class="social_link" href="#">
+                            <img src="images/linkedin.png" alt="">
+                        </a>
+                        <a class="social_link" href="https://www.facebook.com/CanyonMatkaResort">
+                            <img src="images/facebook.png" alt="">
+                        </a>
+                        <a class="social_link" href="https://www.instagram.com/canyonmatka/">
+                            <img src="images/instagram.png" alt="">
+                        </a>
+                        <a class="social_link" href="https://www.tripadvisor.com/Hotel_Review-g3215524-d3733702-Reviews-Hotel_Restaurant_Canyon_Matka-Dolna_Matka_Skopje_Region.html">
+                            <img src="images/twitter.png" alt="">
+                        </a>
+                    </div>
+
+                    <button class="btn" type="button" onClick="Input()">Скидка</button>
+
+                </div>
+
+                <img class="intro_photo" src="images/karpaty-migovo.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- блок основного контента -->
+    <div class="works" id="work">
+        <div class="container">
+
+            <h3 class="text_center">CANYON MATKA RESORT</h3>
+            <div class="service_room">Номера</div>
+            <div class="portfolio">
+
+                <div class="work_box">
+                    <img class="work_photo" src="images/double_comfort.png" alt="">
+                    <div class="work_content">
+                        <div class="work_cat">Comfort Double Room</div>
+                        <div class="work_title">Стоимость
+                            <div class="work_date">€ 59.5/ночь</div>
+                        </div>
+
+                        <ul id='more'>
+                            <li>Телевизор</li>
+                            <li>Двухспальная кровать</li>
+                            <li>Мини-бар</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="work_box">
+                    <img class="work_photo" src="images/double_room_mansarda.png" alt="">
+                    <div class="work_content">
+                        <div class="work_cat">Double Room – Attic With Lake View</div>
+                        <div class="work_title">Стоимость
+                            <div class="work_date">€ 44.5/ночь</div>
+                        </div>
+
+                        <ul id='more1'>
+                            <li>Двухспальная кровать</li>
+                            <li>Терасса</li>
+                            <li>Мини-бар</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="work_box">
+                    <img class="work_photo" src="images/comfort_double_room.png" alt="">
+                    <div class="work_content">
+                        <div class="work_cat">Double Room – Attic</div>
+                        <div class="work_title">Стоимость
+                            <div class="work_date">€ 39.5/ночь</div>
+                        </div>
+
+                        <ul id='more2'>
+                            <li>Двухспальная кровать</li>
+                            <li>Кухня</li>
+                            <li>Мини-бар</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="service_room">Отдых на природе</div>
+            <div class="portfolio">
+
+                <div class="work">
+                    <img class="work_photo" src="images/canoe.png" alt="">
+                    <div class="work_content">
+                        <div class="work_cat">Каякинг</div>
+                        <div class="work_title">Стоимость
+                            <div class="work_date">€ 15/час</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img class="work_photo" src="images/skala.png" alt="">
+                    <div class="work_content">
+                        <div class="work_cat">Скалолазанье</div>
+                        <div class="work_title">Стоимость
+                            <div class="work_date">€ 20/час</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img class="work_photo" src="images/priroda2.png" alt="">
+                    <div class="work_content">
+                        <div class="work_cat">Прогулка по парку</div>
+                        <div class="work_title">Стоимость
+                            <div class="work_date">€ 5/день</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="service_room">Рестор и бар</div>
+            <div class="portfolio">
+
+                <div class="work">
+                    <img class="work_photo" src="images/indoor.png" alt="">
+                    <div class="work_content">
+                        <div class="work_cat">Ресторан</div>
+                        <div class="work_title">Время работы
+                            <div class="work_date">08:00 - 23:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img class="work_photo" src="images/barmen.png" alt="">
+                    <div class="work_content">
+                        <div class="work_cat">Бар</div>
+                        <div class="work_title">Время работы
+                            <div class="work_date">08:00 - 02:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img class="work_photo" src="images/outdoor.png" alt="">
+                    <div class="work_content">
+                        <div class="work_cat">Терасса</div>
+                        <div class="work_title">Время работы
+                            <div class="work_date">12:00 - 02:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="container">
+            <div class="about_inner">
+                <img class="about_photo" src="images/clock.png" alt="">
+
+                <div class="about_content">
+                    <h3 class="about_title">О Каньоне Македония</h3>
+                    <h2 class="about_bigtitle">наша история</h2>
+                    <div class="about_text">
+                        <p>Отель и ресторан Каньон Матка начали работать в 1939 году. Отель напоминает двухэтажный хижину, необычное здание распространиться через богатый пейзаж. Здание состоит из десяти номеров, оформленных в соответствии с местными традициями,
+                            с характерными большими окнами. В предложении имеются одноместные и двухместные номера, комфортабельные, оснащенные телевизором и бесплатным доступом в Интернет. Номера уютные пребывание для хорошего отдыха и спокойного сна.</p>
+                        <p>Ресторан Каньон Каньон предлагает превосходное меню, которое сохраняет аутентичность македонской традиционной кухни. Пища заботливо приготовлена и подана, а впечатление, чтобы было еще сильнее, все это дополняется популярными винами
+                            и десертами.</p>
+                        <p>Мы организуем частные вечеринки.</p>
+                    </div>
+
+                    <!-- Калькулятор в модальном окне -->
+                    <button type="button" class="btn" onclick="modal('myModal')">Калькулятор цен</button>
+                    <div id="myModal" class="modal">
+                        <div class="modalContent">
+                            <div class="modalHeader">
+                                <span class="modalClose" data-close="true" title="Close">&times;</span> Калькулятор цен
+
+
+                            </div>
+
+                            <div class="modalBody">
+                                <div class="con_cal">
+                                    <div class="item input">
+                                        <form name="form"><input type="text" name="textview" readonly></form>
+                                    </div>
+                                    <div class="item clean" onclick="clean()">C</div>
+                                    <div class="item back" onclick="back()">&larr;</div>
+                                    <div class="item" onclick="insert('+')">+</div>
+                                    <div class="item" onclick="insert('-')">-</div>
+                                    <div class="item" onclick="insert('*')">&times;</div>
+                                    <div class="item" onclick="insert('/')">&divide;</div>
+                                    <div class="item" onclick="insert('7')">7</div>
+                                    <div class="item" onclick="insert('8')">8</div>
+                                    <div class="item" onclick="insert('9')">9</div>
+                                    <div class="item" onclick="insert('(')">(</div>
+                                    <div class="item" onclick="insert('4')">4</div>
+                                    <div class="item" onclick="insert('5')">5</div>
+                                    <div class="item" onclick="insert('6')">6</div>
+                                    <div class="item" onclick="insert(')')">)</div>
+                                    <div class="item" onclick="insert('1')">1</div>
+                                    <div class="item" onclick="insert('2')">2</div>
+                                    <div class="item" onclick="insert('3')">3</div>
+                                    <div class="item equal" onclick="equal()">=</div>
+                                    <div class="item zero" onclick="insert('0')">0</div>
+                                    <div class="item" onclick="insert('.')">.</div>
+                                </div>
+
+                            </div>
+
+                            <div class="modalFooter">
+
+                                <div>
+                                    <form>
+                                        <div class="modalFooter">Введите промокод:
+                                            <input class="modalFooter" type="text" id="username" />
+                                            <input class="modalFooter" type="submit" value="Применить промокод" onClick="makeans1()" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Блок отзывы -->
+    <div class="rewiews" id="otziv">
+        <div class="container">
+            <div class="rewiews_inner">
+                <div class="rewiews_text">
+                    <p>Очень хорошее место, хороший персонал, завтрак-супер! Большое спасибо!</p>
+                    <p>Расположение гостиницы «Матка» невероятное! Персонал был очень приятным и заставил нас почувствовать себя желанными гостями. Включенный завтрак был восхитительным, и нас даже угостили бесплатной бутылкой вина. Желаю, чтобы мы остались
+                        подольше!
+                    </p>
+                </div>
+
+                <div class="rewiews_author">
+                    <img src="images/logo_rewiews.png" alt="">
+                    <div class="rewiews_company">Македония</div>
+                    <div class="rewiews_name">Посетители отеля</div>
+                    <div class="rewiews_rating">
+                        <img class="rewiews_star" src="images/star_green.png" alt="">
+                        <img class="rewiews_star" src="images/star_green.png" alt="">
+                        <img class="rewiews_star" src="images/star_green.png" alt="">
+                        <img class="rewiews_star" src="images/star_green.png" alt="">
+                        <img class="rewiews_star_unactive" src="images/star.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_inner">
+                <div class="footer_info">
+                    <div class="footer_copyright">
+                        &copy; 2020 - <a class="author" href="https://vk.com/mixa_r">Рублев Михаил</a>
+                    </div>
+                    <div class="footer_social">
+                        <a class="footer_link" href="#">
+                            <img src="images/linkedin.png" alt="">
+                        </a>
+                        <a class="footer_link" href="#">
+                            <img src="images/facebook.png" alt="">
+                        </a>
+                        <a class="footer_link" href="#">
+                            <img src="images/instagram.png" alt="">
+                        </a>
+                        <a class="footer_link" href="#">
+                            <img src="images/twitter.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer_nav">
+                    <a class="footer_nav_link" href="#" data-scroll="#work">Услуги</a>
+                    <a class="footer_nav_link" href="#" data-scroll="#about">О нас</a>
+                    <a class="footer_nav_link" href="#" data-scroll="#otziv">Отзывы</a>
+                    <a class="footer_nav_link" href="mailto:mixa-r@mail.ru">Обратная связь</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+
+    <!-- Вывод даты и времени изменения сайта-->
+    <div class="container">
+        <div class="work_title">
+            <div class="work_date">
+                <script>
+                    document.write("Дата изменения " + document.lastModified);
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
